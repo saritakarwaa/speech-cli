@@ -1,75 +1,74 @@
-Speech Practice Analyzer CLI 🎤📊
-https://img.shields.io/badge/python-3.8%252B-blue
-https://img.shields.io/badge/License-MIT-yellow.svg
+# 🎤 Speech Practice Analyzer CLI 📊
 
-A command-line tool that helps you practice and improve public speaking or interview skills by recording your speech and providing AI-powered feedback on your performance.
+![Python Version](https://img.shields.io/badge/python-3.8%252B-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-Key Features ✨
-Voice Recording: Capture your speech directly in the CLI
+A command-line tool that helps you **practice and improve public speaking or interview skills** by recording your speech and providing **AI-powered feedback** on your performance.
 
-AI-Powered Transcription: Convert speech to text using OpenAI's Whisper
+---
 
-Performance Metrics: Get detailed feedback on:
+## ✨ Key Features
 
-Speaking pace (Words Per Minute)
+- 🎙️ **Voice Recording**: Capture your speech directly in the CLI  
+- 🧠 **AI-Powered Transcription**: Convert speech to text using OpenAI's Whisper  
+- 📈 **Performance Metrics**: Get detailed feedback on:
+  - 🕐 **Speaking pace (Words Per Minute)**
+  - 🔊 **Clarity score**
+  - 🤔 **Filler word count** ("um", "like", "you know")
+  - 📚 **Vocabulary variety**
+  - 💪 **Confidence indicators**
+- 📤 **Export Reports**: Save feedback as Markdown or JSON files  
+- 📊 **Progress Tracking**: View your improvement over time (history feature)  
 
-Clarity score
+---
 
-Filler word count ("um", "like", "you know")
+## 🛠️ Tech Stack
 
-Vocabulary variety
+- **Python**: Core programming language  
+- **PyAudio**: Audio recording  
+- **OpenAI Whisper**: Speech-to-text transcription  
+- **TextStat**: Text analysis metrics  
+- **Rich**: Terminal formatting and visualization  
 
-Confidence indicators
+---
 
-Export Reports: Save feedback as Markdown or JSON files
+## 🚀 Usage
 
-Progress Tracking: View your improvement over time (history feature)
+### ▶️ Record Your Speech
 
-Tech Stack 🛠️
-Python: Core language
-
-PyAudio: Audio recording
-
-OpenAI Whisper: Speech-to-text transcription
-
-TextStat: Text analysis metrics
-
-Rich: Terminal formatting
-
-Usage 🚀
-Record Your Speech
-bash
+```bash
 python cli.py record --duration 30 --prompt "Tell me about yourself"
-Creates WAV file in recordings/ directory
+```
+- Creates a .wav file in the recordings/ directory.
 
-Analyze Your Recording
-bash
+### 🔍 Analyze Your Recording
+```bash
 python cli.py analyze recordings/1680000000.wav
-Sample output:
+```
+Sample Output:
 
-text
-📝 Transcription: "I'm a software engineer with experience in Python and machine learning"
+yaml
+Copy code
+📝 Transcription:
+"I'm a software engineer with experience in Python and machine learning"
+
 📊 Feedback:
 - WPM: 145.2
 - Filler Count: 2
 - Vocab Variety: 78.5%
 - Clarity: 88.3%
 - Confidence Score: 92.1%
-Export Feedback Report
-bash
-# JSON format
+
+### 📁 Export Feedback Report
+# Export in JSON format
+```bash
 python cli.py export recordings/1680000000.wav --format json
-
-# Markdown format
+```
+# Export in Markdown format
+```bash
 python cli.py export recordings/1680000000.wav --format md
-Reports saved to feedback/ directory
+```
+Reports are saved to the feedback/ directory.
 
-View Session History
-bash
-python cli.py history --limit 5
-Output:
-
-text
-2023-10-15 14:30:00 — 142 WPM, clarity 85%
-2023-10-14 09:15:00 — 135 WPM, clarity 82%
-2023-10-13 16:45:00 — 128 WPM, clarity 79%
+🤝 Contributions
+Feel free to fork, raise issues, or submit pull requests!
