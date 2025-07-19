@@ -46,9 +46,6 @@ python cli.py record --duration 30 --prompt "Tell me about yourself"
 python cli.py analyze recordings/1680000000.wav
 ```
 Sample Output:
-
-yaml
-Copy code
 📝 Transcription:
 "I'm a software engineer with experience in Python and machine learning"
 
@@ -60,11 +57,11 @@ Copy code
 - Confidence Score: 92.1%
 
 ### 📁 Export Feedback Report
-# Export in JSON format
+#### Export in JSON format
 ```bash
 python cli.py export recordings/1680000000.wav --format json
 ```
-# Export in Markdown format
+#### Export in Markdown format
 ```bash
 python cli.py export recordings/1680000000.wav --format md
 ```
