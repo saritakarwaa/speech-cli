@@ -1,0 +1,15 @@
+# audio capture & manipulation
+pydub
+speechrecognition
+
+# transcription
+openai-whisper    # or google-cloud-speech
+
+# analysis
+textstat          # for readability (optional)
+numpy
+
+# CLI and storage
+argparse
+sqlite3           # stdlib
+rich              # for colored CLI output (optional)
